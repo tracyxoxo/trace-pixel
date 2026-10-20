@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Traço & Pixel
 
-## Getting Started
+> Laboratório visual e interativo de computação gráfica: conectando o desenho vetorial contínuo à matriz discreta de pixels e à extrusão 3D.
 
-First, run the development server:
+---
 
+## 🚀 Como Inicializar
+
+### No Windows (1 Clique)
+Basta dar dois cliques no arquivo:
+```cmd
+iniciar.bat
+```
+*(ou execute `start.bat`)*
+
+O script irá automaticamente:
+1. Verificar a instalação do Node.js.
+2. Instalar as dependências (`npm install`) caso seja a primeira execução.
+3. Iniciar o servidor local.
+4. Abrir automaticamente a aplicação no navegador em **http://localhost:3000**.
+
+---
+
+### Via Terminal (Qualquer Sistema)
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Funcionalidades
 
-## Learn More
+- **Tutorial Interativo Integrado**: Guia passo a passo ("Como Usar") explicando os conceitos fundamentais de computação gráfica, rasterização e filtros.
+- **Estúdio de Desenho Vetorial**: Crie formas geométricas (lápis livre, retângulos, círculos, linhas, polígonos de múltiplos vértices e borracha) com espessura ajustável e paleta curada.
+- **Modelos Prontos (Presets)**: Carregue com 1 clique modelos clássicos como *Estudo da Casa*, *Coração Geométrico*, *Foguete em Decolagem*, *Emoticon Sorridente* e *Tipografia (Glifo 'A')*.
+- **Rasterização em Tempo Real (32 × 20)**: Observe como cada traço contínuo é amostrado e convertido em uma matriz discreta de dados.
+- **Processamento de Imagem & Filtros**:
+  - *Original*: Matriz com as cores puras.
+  - *Cinza*: Cálculo de luminância perceptual humana ($Y = 0.299R + 0.587G + 0.114B$).
+  - *Desfoque (Blur)*: Convolução e suavização espacial pela média dos vizinhos 3×3.
+  - *Detecção de Bordas*: Identificação de descontinuidades bruscas de contraste (gradientes tipo Sobel).
+- **Extrusão 3D Voxel Interativa**:
+  - Cada pixel ativo é renderizado como um bloco 3D com iluminação e sombras em tempo real via Three.js e React Three Fiber.
+  - Controles de órbita suaves (arraste para girar, role o mouse para zoom).
+  - Botões flutuantes para Aproximar (+), Afastar (-) e Restaurar Câmera (↺).
+- **Exportação PNG**: Exporte o resultado da sua composição em alta qualidade.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tecnologias
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 16** (App Router, Turbopack)
+- **React 19**
+- **Three.js** & **@react-three/fiber** / **@react-three/drei**
+- **Lucide Icons**
+- **Tailwind CSS v4**

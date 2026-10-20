@@ -556,7 +556,7 @@ export default function Studio() {
             </div>
           </div>
 
-          <div className={`artboard ${view !== "draw" ? "artboard-output" : ""}`}>
+          <div className={`artboard ${view !== "draw" ? "artboard-output" : ""} ${view === "3d" ? "artboard-3d" : ""}`}>
             {view === "draw" && (
               <>
                 <canvas
@@ -601,9 +601,6 @@ export default function Studio() {
             {view === "3d" && (
               <div className="scene-container">
                 <PixelScene pixels={output} />
-                <div className="scene-interactive-tip">
-                  <span>🖱️ Arraste com o botão esquerdo para orbitar a cena 3D</span>
-                </div>
               </div>
             )}
 
