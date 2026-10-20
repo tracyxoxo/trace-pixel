@@ -713,20 +713,15 @@ button { color: inherit; }
   border-radius: 1px;
 }
 
-/* 3D Container & Scene Controls */
-.scene-container {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
+/* 3D Scene Container & Controls */
 .pixel-scene {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  width: min(100%, 680px);
+  aspect-ratio: 8 / 5;
+  border: 1px solid #d4ded3;
+  background: #edf1e9;
+  box-shadow: 0 10px 28px rgba(36, 62, 53, 0.1);
+  border-radius: 3px;
   overflow: hidden;
 }
 

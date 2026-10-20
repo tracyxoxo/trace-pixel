@@ -598,11 +598,7 @@ export default function Studio() {
               </div>
             )}
 
-            {view === "3d" && (
-              <div className="scene-container">
-                <PixelScene pixels={output} />
-              </div>
-            )}
+            {view === "3d" && <PixelScene pixels={output} />}
 
             <div className="canvas-caption">
               <span>{currentProjectName.toUpperCase()}</span>

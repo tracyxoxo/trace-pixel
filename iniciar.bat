@@ -32,18 +32,21 @@ if not exist "node_modules\" (
     echo.
 )
 
-:: 3. Informar o usuário e abrir no navegador
+:: 3. Liberar porta 3000 se houver processo Next.js anterior preso
+powershell -NoProfile -Command "Get-NetTCPConnection -LocalPort 3000 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }" >nul 2>nul
+
+:: 4. Informar o usuário e abrir no navegador
 echo [INFO] Iniciando o servidor de desenvolvimento...
 echo [INFO] O projeto estará disponível em: http://localhost:3000
 echo.
-echo Pressione Ctrl+C nesta janela para encerrar o servidor quando desejar.
+echo Dica: Pressione Ctrl+C nesta janela para encerrar o servidor.
 echo ========================================================
 echo.
 
 :: Abrir navegador automaticamente após breve pausa
 start "" /b cmd /c "timeout /t 3 /nobreak >nul & start http://localhost:3000"
 
-:: 4. Executar o Next.js dev server
+:: 5. Executar o Next.js dev server
 call npm run dev
 
 pause
