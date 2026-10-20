@@ -121,7 +121,6 @@ A forma mais rápida e prática! Não precisa digitar nenhum comando no terminal
    ```cmd
    iniciar.bat
    ```
-   *(ou no atalho `start.bat`)*
 
 **O que o `iniciar.bat` faz automaticamente por você:**
 1. Valida se o Node.js está presente no sistema (caso não esteja, avisa amigavelmente onde baixar).
@@ -215,7 +214,6 @@ Clique sobre os filtros para aplicar transformações matemáticas na matriz:
 ```text
 trace-pixel/
 ├── iniciar.bat                  # Inicializador rápido com 1 clique para Windows
-├── start.bat                    # Atalho secundário para o iniciar.bat
 ├── package.json                 # Dependências e scripts do projeto
 ├── README.md                    # Documentação completa
 ├── src/
