@@ -111,18 +111,24 @@ Se ambos responderem com números de versão, o Node.js está **100% configurado
 
 ## 🚀 Como Inicializar o Projeto
 
-Com o Node.js instalado, você tem duas formas de iniciar o estúdio:
+Com o Node.js instalado, você pode iniciar o estúdio usando o **`iniciar.bat`** (que agora é híbrido e funciona tanto no **Windows** quanto no **Linux / macOS**):
 
-### Opção 1: 1 Clique no Windows (`iniciar.bat`)
-A forma mais rápida e prática! Não precisa digitar nenhum comando no terminal.
+### No Windows (1 Clique)
+Basta dar dois cliques sobre o arquivo:
+```cmd
+iniciar.bat
+```
 
-1. Abra a pasta do projeto no Explorador de Arquivos.
-2. Dê dois cliques sobre o arquivo:
-   ```cmd
-   iniciar.bat
-   ```
+### No Linux ou macOS (Via Terminal)
+O arquivo `iniciar.bat` possui arquitetura híbrida (*polyglot*), sendo interpretado nativamente pelo Bash no Linux:
+```bash
+./iniciar.bat
+# ou: bash iniciar.bat
+```
 
-**O que o `iniciar.bat` faz automaticamente por você:**
+---
+
+**O que o `iniciar.bat` faz automaticamente por você (em qualquer sistema):**
 1. Valida se o Node.js está presente no sistema (caso não esteja, avisa amigavelmente onde baixar).
 2. Se for a primeira vez que você abre, executa o `npm install` para baixar as dependências necessárias.
 3. Garante que a porta 3000 esteja livre antes de subir o servidor, evitando travamentos.
@@ -130,11 +136,11 @@ A forma mais rápida e prática! Não precisa digitar nenhum comando no terminal
 5. Abre automaticamente o projeto no seu navegador padrão no endereço **http://localhost:3000**.
 
 > [!TIP]
-> Para fechar o servidor quando terminar de usar, basta fechar a janela preta do terminal ou pressionar <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+> Para fechar o servidor quando terminar de usar, basta fechar a janela do terminal ou pressionar <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ---
 
-### Opção 2: Pelo Terminal / Linha de Comando
+### Opção Alternativa: Comandos Padrão do NPM
 Se você prefere o terminal ou está em outro sistema operacional (macOS / Linux):
 
 1. Abra o terminal na pasta raiz do projeto:
